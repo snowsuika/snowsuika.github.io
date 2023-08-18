@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Categories - Snow&#39;s blog</title>
+<title>Obsidian 上傳到 imgur 圖庫 - Snow&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -16,16 +16,26 @@
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Snow&#39;s blog">
-<meta property="og:url" content="https://snowsuika.github.io/categories/index.html">
+    <meta name="description" content="前言Obsidian 在上傳圖片的時候預設是上傳到本地，但其實有滿多免費空間的選擇～就可以上傳到免費空間不會佔用本地的空間。這邊以 imgur 做示範 一、註冊 Application 取得 Client  ID註冊完 imgur 帳號後參考官網 API 文件 中註冊 Register an Application  Application 可以隨便填 OAuth 選第二個，不用 callback">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Obsidian 上傳到 imgur 圖庫">
+<meta property="og:url" content="https://snowsuika.github.io/2023/08/16/2023-08-16-obsidian-imgur-upload-image/index.html">
 <meta property="og:site_name" content="Snow&#39;s blog">
+<meta property="og:description" content="前言Obsidian 在上傳圖片的時候預設是上傳到本地，但其實有滿多免費空間的選擇～就可以上傳到免費空間不會佔用本地的空間。這邊以 imgur 做示範 一、註冊 Application 取得 Client  ID註冊完 imgur 帳號後參考官網 API 文件 中註冊 Register an Application  Application 可以隨便填 OAuth 選第二個，不用 callback">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/kRtPveb.png">
+<meta property="og:image" content="https://i.imgur.com/17qGsnc.png">
+<meta property="og:image" content="https://i.imgur.com/XLZog2o.png">
+<meta property="og:image" content="https://i.imgur.com/DUco51p.png">
+<meta property="og:image" content="https://i.imgur.com/DvwuMCs.png">
+<meta property="og:image" content="https://i.imgur.com/QDMwXHT.png">
+<meta property="og:image" content="https://i.imgur.com/RfSTSo3.png">
+<meta property="article:published_time" content="2023-08-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-16T02:34:32.029Z">
 <meta property="article:author" content="Snow">
 <meta property="article:tag" content="Obsidian">
-<meta property="article:tag" content="Git">
-<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/kRtPveb.png">
 
 
 
@@ -123,30 +133,84 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5><i class="far fa-folder"></i>Categories</h5>
-        </div>
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Obsidian 上傳到 imgur 圖庫
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>Aug 16 2023</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Obsidian/">Obsidian</a>
+        </span>
+        
+        
     </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="columns is-variable is-1 is-multiline is-mobile">
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Obsidian 在上傳圖片的時候預設是上傳到本地，但其實有滿多免費空間的選擇～就可以上傳到免費空間不會佔用本地的空間。這邊以 imgur 做示範</p>
+<h2 id="一、註冊-Application-取得-Client-ID"><a href="#一、註冊-Application-取得-Client-ID" class="headerlink" title="一、註冊 Application 取得 Client  ID"></a>一、註冊 Application 取得 Client  ID</h2><p>註冊完 imgur 帳號後參考官網 <a target="_blank" rel="noopener" href="https://apidocs.imgur.com/">API 文件</a> 中註冊 <a target="_blank" rel="noopener" href="https://api.imgur.com/oauth2/addclient">Register an Application</a></p>
+<ul>
+<li>Application 可以隨便填</li>
+<li>OAuth 選第二個，不用 callback URL</li>
+<li>website 選填</li>
+<li>mail 必填<br><img src="https://i.imgur.com/kRtPveb.png"><br>送出後可以得到 Client ID 跟 Client secret ，這邊要注意的是 <strong>離開這個頁面後 Client secret 就找不到了，所以記得保存好</strong><br><img src="https://i.imgur.com/17qGsnc.png"></li>
+</ul>
+<p>接下來可以把 Client ID 複製起來貼到 Obsidian 了～<br>順帶一提，如果找不到 Client ID 的話，可以到右上角的 Settings 這邊</p>
+<p><img src="https://i.imgur.com/XLZog2o.png"><br>點擊左邊的 Applications ，這邊可以看到剛剛註冊的 Client ID<br><img src="https://i.imgur.com/DUco51p.png"></p>
+<h2 id="二、在-Obsidian-使用-Imgur-Plugin"><a href="#二、在-Obsidian-使用-Imgur-Plugin" class="headerlink" title="二、在 Obsidian 使用 Imgur Plugin"></a>二、在 Obsidian 使用 Imgur Plugin</h2><p>參考 <a target="_blank" rel="noopener" href="https://github.com/gavvvr/obsidian-imgur-plugin">obsidian-imgur-plugin Github</a>  READMD</p>
+<p>安裝的部分到 Obsidian 的 Community Plugins 搜尋 ==Imgur Plugin== 安裝起來<br><img src="https://i.imgur.com/DvwuMCs.png"></p>
+<p>記得 Community Plugins 這邊要將 Imgur Plugin 開起來<br><img src="https://i.imgur.com/QDMwXHT.png"></p>
+<p>進到 Plugins 設定這邊把剛剛步驟一的 Client ID 貼上去<br><img src="https://i.imgur.com/RfSTSo3.png"><br>第一個選項 Images upload approach 也可以選擇 Authenticated 用驗證的方式，選擇下去的話會導入到驗證的頁面。</p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/gavvvr/obsidian-imgur-plugin">gavvvr/obsidian-imgur-plugin: Pastes images right to imgur.com (github.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://apidocs.imgur.com/">Imgur API</a></li>
+</ul>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Obsidian/">#Obsidian</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/categories/Obsidian/">Obsidian&nbsp;(1)</a>
-            </span>
+            <a href="/2023/08/18/2023-08-18-git-change-branch-name/">Git 改變 branch 名稱</a>
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/categories/Git/">Git&nbsp;(1)</a>
-            </span>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/categories/Hexo/">Hexo&nbsp;(1)</a>
-            </span>
+            <a href="/2023/08/14/hello-world/">Hello World</a>
             
-        </div>
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='https://snowsuika.gitlab.io/' async='async'></script>
+
+</div>
+
+
+
     </div>
 </section>
     <footer class="footer">
